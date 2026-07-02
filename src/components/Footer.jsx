@@ -130,9 +130,10 @@ export default function Footer({ setActivePage, scrollToSection }) {
               <li className="flex items-start space-x-2.5">
                 <MapPin size={18} className="text-liturgical-gold shrink-0 mt-0.5" />
                 <span className="leading-tight text-gray-300">
-                  Praça da Matriz, s/nº<br />
-                  Mauá, Magé - RJ<br />
-                  CEP 25930-000
+                  Igreja de São Pedro<br />
+                  Praça Palmira Barenco – Praia de Olaria – Mauá<br />
+                  Guia de Pacobaíba (Magé), RJ<br />
+                  CEP: 25930-000
                 </span>
               </li>
               <li className="flex items-center space-x-2.5">

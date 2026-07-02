@@ -106,7 +106,7 @@ export default function Contact() {
                   <div>
                     <h4 className="text-sm font-semibold text-white">Endereço Principal</h4>
                     <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                      Praça da Matriz, s/nº - Distrito de Mauá, Magé - RJ, CEP 25930-000
+                      Igreja de São Pedro - Praça Palmira Barenco – Praia de Olaria – Mauá, Guia de Pacobaíba (Magé) - RJ, CEP: 25930-000
                     </p>
                   </div>
                 </div>
