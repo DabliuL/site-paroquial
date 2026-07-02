@@ -1,14 +1,39 @@
 {
   "sabados": [
-    { "igreja": "Igreja Nossa Senhora dos Remédios", "horario": "08:30" },
-    { "igreja": "Igreja Nossa Senhora das Graças", "horario": "18:00" },
-    { "igreja": "Igreja Nossa Senhora da Lampadosa", "horario": "19:30" }
+    {
+      "igreja": "Igreja Nossa Senhora dos Remédios",
+      "horario": "08:30"
+    },
+    {
+      "igreja": "Igreja Nossa Senhora das Graças",
+      "horario": "18:00"
+    },
+    {
+      "igreja": "Igreja Nossa Senhora da Lampadosa",
+      "horario": "19:30"
+    },
+    {
+      "igreja": "Igreja de São Longinho",
+      "horario": "10:00"
+    }
   ],
   "domingos": [
-    { "igreja": "Igreja Nossa Senhora da Guia (Matriz)", "horario": "08:00" },
-    { "igreja": "Igreja São Pedro", "horario": "10:00" },
-    { "igreja": "Igreja São Francisco", "horario": "18:30" },
-    { "igreja": "Igreja Santa Filomena ou Igreja Nossa Senhora Aparecida", "horario": "18:30" }
+    {
+      "igreja": "Igreja Nossa Senhora da Guia (Matriz)",
+      "horario": "08:00"
+    },
+    {
+      "igreja": "Igreja São Pedro",
+      "horario": "10:00"
+    },
+    {
+      "igreja": "Igreja São Francisco",
+      "horario": "18:30"
+    },
+    {
+      "igreja": "Igreja Santa Filomena ou Igreja Nossa Senhora Aparecida",
+      "horario": "18:30"
+    }
   ],
   "confissoes": "O atendimento de confissões deve ser agendado com a secretaria paroquial, mas pode haver atendimentos em algumas missas semanais.",
   "expediente": "Terça a Sexta: 08:00 - 12:00 / 17:00 - 18:30. Sábados: 08:00 - 12:00.",
