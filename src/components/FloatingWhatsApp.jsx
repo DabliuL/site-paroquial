@@ -27,7 +27,7 @@ export default function FloatingWhatsApp() {
     };
   }, []);
 
-  const phoneNumber = '5521999999999'; // Simulated church number
+  const phoneNumber = '5521985780538';
   const message = 'Olá! Gostaria de falar com a secretaria da Paróquia Nossa Senhora da Guia.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

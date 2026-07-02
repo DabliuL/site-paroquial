@@ -582,7 +582,7 @@ export default function Home({ setActivePage, scrollToSection }) {
                     </p>
                     <button 
                       onClick={() => {
-                        const phoneNumber = '5521999999999';
+                        const phoneNumber = '5521985780538';
                         const text = `Olá! Tenho interesse em participar ou ajudar na ${pastoral.title}. Como posso me inscrever?`;
                         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, '_blank');
                       }}

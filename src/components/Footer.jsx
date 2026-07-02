@@ -137,11 +137,11 @@ export default function Footer({ setActivePage, scrollToSection }) {
               </li>
               <li className="flex items-center space-x-2.5">
                 <Phone size={16} className="text-liturgical-gold shrink-0" />
-                <span className="text-gray-300">(21) 99999-9999</span>
+                <span className="text-gray-300">+55 (21) 98578-0538</span>
               </li>
               <li className="flex items-center space-x-2.5">
                 <Mail size={16} className="text-liturgical-gold shrink-0" />
-                <span className="text-gray-300 break-all">secretaria@nsguia.com.br</span>
+                <span className="text-gray-300 break-all">nsguia-pacobaiba@diocesepetropolis.org.br</span>
               </li>
             </ul>
           </div>

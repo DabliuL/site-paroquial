@@ -32,7 +32,7 @@ export default function Contact() {
       `*Assunto:* ${formData.subject}\n\n` +
       `*Mensagem:*\n${formData.message}`;
 
-    const phoneNumber = '5521999999999'; // Paróquia WhatsApp
+    const phoneNumber = '5521985780538';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(formattedText)}`;
 
     // Simulate sending progress and redirect
@@ -89,7 +89,7 @@ export default function Contact() {
                   <Phone className="text-liturgical-gold shrink-0 mt-0.5" size={20} />
                   <div>
                     <h4 className="text-sm font-semibold text-white">WhatsApp / Telefone</h4>
-                    <p className="text-xs text-gray-400 mt-1">(21) 99999-9999</p>
+                    <p className="text-xs text-gray-400 mt-1">+55 (21) 98578-0538</p>
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ export default function Contact() {
                   <Mail className="text-liturgical-gold shrink-0 mt-0.5" size={20} />
                   <div>
                     <h4 className="text-sm font-semibold text-white">E-mail</h4>
-                    <p className="text-xs text-gray-400 mt-1 break-all">secretaria@nsguia.com.br</p>
+                    <p className="text-xs text-gray-400 mt-1 break-all">nsguia-pacobaiba@diocesepetropolis.org.br</p>
                   </div>
                 </div>
 
