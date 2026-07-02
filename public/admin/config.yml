@@ -1,0 +1,83 @@
+# ============================================================
+# Decap CMS — Paróquia Nossa Senhora da Guia
+# ============================================================
+# PRODUÇÃO: Este arquivo usa o backend git-gateway (Netlify).
+# Para testar localmente, descomente "local_backend: true"
+# e rode em outro terminal: npx decap-server
+# ============================================================
+
+# local_backend: true   # ← Descomente para testes locais
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+locale: pt
+
+# ============================================================
+# COLEÇÕES EDITÁVEIS
+# ============================================================
+
+collections:
+
+  # ──────────────────────────────────────────────────────────
+  # 1. HORÁRIOS DE MISSA
+  # ──────────────────────────────────────────────────────────
+  - name: "horarios_missa"
+    label: "⛪ Horários de Missa"
+    files:
+      - name: "horarios"
+        label: "Horários de Missa"
+        file: "src/data/horarios.json"
+        format: json
+        fields:
+
+          - label: "🗓️ Missas de Sábado"
+            name: "sabados"
+            widget: "list"
+            label_singular: "Missa"
+            summary: "{{fields.horario}} — {{fields.igreja}}"
+            fields:
+              - label: "Igreja / Local"
+                name: "igreja"
+                widget: "string"
+                hint: "Nome da igreja ou capela (ex: Igreja Nossa Senhora dos Remédios)"
+              - label: "Horário"
+                name: "horario"
+                widget: "string"
+                hint: "Formato 24h com dois pontos (ex: 08:30)"
+                pattern: ['^\d{2}:\d{2}$', "Use o formato HH:MM (ex: 08:30)"]
+
+          - label: "☀️ Missas de Domingo"
+            name: "domingos"
+            widget: "list"
+            label_singular: "Missa"
+            summary: "{{fields.horario}} — {{fields.igreja}}"
+            fields:
+              - label: "Igreja / Local"
+                name: "igreja"
+                widget: "string"
+                hint: "Nome da igreja ou capela"
+              - label: "Horário"
+                name: "horario"
+                widget: "string"
+                hint: "Formato 24h com dois pontos (ex: 10:00)"
+                pattern: ['^\d{2}:\d{2}$', "Use o formato HH:MM (ex: 10:00)"]
+
+          - label: "🙏 Confissões"
+            name: "confissoes"
+            widget: "text"
+            hint: "Texto exibido no bloco de Confissões e Secretaria do site"
+
+          - label: "🏢 Expediente Paroquial"
+            name: "expediente"
+            widget: "text"
+            hint: "Horário de funcionamento da secretaria (ex: Terça a Sexta: 08:00 - 12:00)"
+
+          - label: "📢 Aviso do Banner"
+            name: "aviso_banner"
+            widget: "text"
+            hint: "Mensagem exibida no rodapé da seção de horários"

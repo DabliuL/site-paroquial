@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paróquia Nossa Senhora da Guia | Mauá, Magé - RJ</title>
+    <meta name="description" content="Site oficial da Paróquia Nossa Senhora da Guia em Mauá, Magé - RJ. Veja horários de missas, confissões, as 9 capelas de nosso território, nossas pastorais e últimas notícias." />
+    <meta name="keywords" content="paróquia, igreja católica, mauá, magé, nossa senhora da guia, missa, confissão, pastorais, capelas" />
+    <meta name="robots" content="index, follow" />
+    <!-- Netlify Identity — necessário para o painel /admin funcionar após login -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Redireciona para o painel /admin após login via Netlify Identity
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function(user) {
+          if (!user) {
+            window.netlifyIdentity.on('login', function() {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
+
