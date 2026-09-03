@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, MapPin, ChevronRight, ArrowRight, BookOpen, Heart, Users, Compass, Megaphone, MessageCircle, Star, GraduationCap, Music, Droplets, Gift, CircleDot } from 'lucide-react';
 import heroAltar from '../assets/hero_church_altar.png';
-import priestPortrait from '../assets/priest_portrait.png';
 import marianImg from '../assets/our_lady_guide.png';
 import horarios from '../data/horarios.json';
 
@@ -115,27 +114,6 @@ export default function Home({ setActivePage, scrollToSection }) {
       title: 'Pastoral do Batismo',
       icon: <Droplets size={24} />,
       desc: 'Acompanhamento e preparação de pais e padrinhos para o sacramento do Batismo, primeiro passo na vida cristã e na comunidade eclesial.',
-    },
-  ];
-
-  const priests = [
-    {
-      name: 'Padre Mateus Silva',
-      role: 'Pároco Atual (Desde 2020)',
-      period: '2020 - Presente',
-      bio: 'Foco na dinamização das pastorais juvenis, ampliação dos serviços de caridade social em Magé e fortalecimento da unidade entre as 9 capelas.',
-    },
-    {
-      name: 'Padre Francisco Souza',
-      role: 'Pároco Emérito',
-      period: '2012 - 2020',
-      bio: 'Responsável pela reforma estrutural da Igreja Matriz e reestruturação administrativa e contábil da secretaria paroquial.',
-    },
-    {
-      name: 'Padre Antônio Santos',
-      role: 'Pároco Anterior',
-      period: '2000 - 2012',
-      bio: 'Fundador das pastorais sociais de acolhimento e forte incentivador da criação das comunidades e capelas periféricas.',
     },
   ];
 
@@ -595,60 +573,6 @@ export default function Home({ setActivePage, scrollToSection }) {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. TIMELINE OF PRIESTS */}
-      <section className="py-24 bg-mariana-navy border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
-              Nossos Párocos
-            </h2>
-            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              Nossa sincera gratidão aos sacerdotes que doaram suas vidas guiando espiritualmente nossa paróquia em Mauá ao longo de nossa história.
-            </p>
-          </div>
-
-          {/* Timeline */}
-          <div className="space-y-12 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-white/10">
-            {priests.map((priest, index) => (
-              <div 
-                key={index}
-                className={`flex flex-col md:flex-row relative ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                }`}
-              >
-                {/* Timeline Dot/Icon */}
-                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-liturgical-gold border-4 border-mariana-navy z-10 flex items-center justify-center">
-                  <span className="text-[10px] font-bold text-mariana-navy leading-none">†</span>
-                </div>
-
-                {/* Content Block */}
-                <div className="pl-12 md:pl-0 w-full md:w-1/2 px-4">
-                  <div className="bg-white/5 border border-white/5 rounded-3xl p-6 hover:border-liturgical-gold/20 transition-all duration-300">
-                    <div className="flex items-center space-x-4 mb-4">
-                      {index === 0 && (
-                        <img 
-                          src={priestPortrait} 
-                          alt={priest.name} 
-                          className="w-16 h-16 rounded-full object-cover border-2 border-liturgical-gold/60"
-                        />
-                      )}
-                      <div>
-                        <h3 className="text-lg font-serif font-bold text-white leading-tight">{priest.name}</h3>
-                        <span className="text-xs text-liturgical-gold-light font-medium">{priest.role}</span>
-                        <span className="block text-[10px] text-gray-500 font-semibold uppercase tracking-wider mt-0.5">{priest.period}</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-400 text-sm leading-relaxed">
-                      {priest.bio}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
