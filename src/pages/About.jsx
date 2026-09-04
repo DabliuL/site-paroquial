@@ -46,10 +46,10 @@ export default function About() {
                 Uma Jornada Centenária de Fé e Acolhimento
               </h2>
               <p className="text-gray-300 text-sm leading-relaxed">
-                A história da **Paróquia Nossa Senhora da Guia** está profundamente entrelaçada com as raízes do distrito de Mauá, em Magé. Nascida inicialmente a partir de pequenas reuniões e da fervorosa devoção dos pescadores e moradores locais à Virgem Maria, a comunidade edificou seu primeiro altar de oração como um sinal visível da presença de Deus entre as famílias.
+                A história da <strong className="font-semibold text-white">Paróquia Nossa Senhora da Guia</strong> está profundamente entrelaçada com as raízes do distrito de Mauá, em Magé. Nascida inicialmente a partir de pequenas reuniões e da fervorosa devoção dos pescadores e moradores locais à Virgem Maria, a comunidade edificou seu primeiro altar de oração como um sinal visível da presença de Deus entre as famílias.
               </p>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Ao longo das décadas, o que começou como uma capela simples cresceu em espírito e estrutura. Hoje, constituída como paróquia centenária sob a tutela da **Diocese de Petrópolis**, temos a alegria de ser o lar espiritual e administrativo de 9 capelas que estendem o serviço pastoral por todo o território local.
+                Ao longo das décadas, o que começou como uma capela simples cresceu em espírito e estrutura. Hoje, constituída como paróquia centenária sob a tutela da <strong className="font-semibold text-white">Diocese de Petrópolis</strong>, temos a alegria de ser o lar espiritual e administrativo de 9 capelas que estendem o serviço pastoral por todo o território local.
               </p>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Nossos sacerdotes e fiéis leigos continuam a perpetuar esse legado de amor, mantendo as portas abertas a todos os visitantes e paroquianos que buscam os sacramentos da confissão e da eucaristia, bem como a vivência fraterna e a solidariedade cristã.

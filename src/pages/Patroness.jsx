@@ -46,7 +46,7 @@ export default function Patroness() {
                 A Estrela que Guia o Povo de Mauá
               </h2>
               <p className="text-gray-300 text-sm leading-relaxed">
-                A devoção a **Nossa Senhora da Guia** possui profundas raízes na tradição cristã marítima e ibérica. Sob esse título, a Virgem Maria é invocada como a "Estrela do Mar" (*Stella Maris*), aquela que serve de farol espiritual e norte seguro para os navegantes que enfrentavam tempestades e incertezas em alto-mar.
+                A devoção a <strong className="font-semibold text-white">Nossa Senhora da Guia</strong> possui profundas raízes na tradição cristã marítima e ibérica. Sob esse título, a Virgem Maria é invocada como a "Estrela do Mar" <em class="italic">(Stella Maris)</em>, aquela que serve de farol espiritual e norte seguro para os navegantes que enfrentavam tempestades e incertezas em alto-mar.
               </p>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Essa devoção encontrou terra fértil no distrito de Mauá, em Magé. Sendo historicamente uma região costeira onde a pesca e a navegação fluvial eram a base da vida diária das famílias, os moradores e pescadores locais naturalmente colocavam suas vidas, barcos e famílias sob o patrocínio celestial de Maria. Ela era a mãe amorosa a quem oravam antes de lançar as redes e a quem agradeciam ao retornar com segurança para a praia.
