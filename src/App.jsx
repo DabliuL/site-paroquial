@@ -3,8 +3,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
-import About from './pages/About';
-import Patroness from './pages/Patroness';
 import Contact from './pages/Contact';
 
 function App() {
@@ -31,10 +29,6 @@ function App() {
     switch (activePage) {
       case 'home':
         return <Home setActivePage={setActivePage} scrollToSection={scrollToSection} />;
-      case 'about':
-        return <About />;
-      case 'patroness':
-        return <Patroness />;
       case 'contact':
         return <Contact />;
       default:

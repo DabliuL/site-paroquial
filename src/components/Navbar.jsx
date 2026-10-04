@@ -35,8 +35,6 @@ export default function Navbar({ activePage, setActivePage, scrollToSection }) {
 
   const navLinks = [
     { label: 'Início', page: 'home', sectionId: null },
-    { label: 'Quem Somos', page: 'about', sectionId: null },
-    { label: 'Padroeira', page: 'patroness', sectionId: null },
     { label: 'Capelas', page: 'home', sectionId: 'capelas' },
     { label: 'Pastorais', page: 'home', sectionId: 'pastorais' },
     { label: 'Notícias', page: 'home', sectionId: 'noticias' },

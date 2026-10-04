@@ -68,11 +68,6 @@ export default function Footer({ setActivePage, scrollToSection }) {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('about')} className="hover:text-liturgical-gold hover:translate-x-1 transition-all cursor-pointer">
-                  Quem Somos (Sobre Nós)
-                </button>
-              </li>
-              <li>
                 <button onClick={() => handleNavClick('home', 'horarios')} className="hover:text-liturgical-gold hover:translate-x-1 transition-all cursor-pointer">
                   Horários de Missa
                 </button>

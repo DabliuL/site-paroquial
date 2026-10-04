@@ -161,10 +161,10 @@ export default function Home({ setActivePage, scrollToSection }) {
               <ArrowRight size={18} />
             </button>
             <button
-              onClick={() => setActivePage('about')}
+              onClick={() => setActivePage('contact')}
               className="w-full sm:w-auto border border-white/20 hover:border-white/60 hover:bg-white/5 text-white font-semibold px-8 py-4 rounded-full transition-all flex items-center justify-center space-x-2 cursor-pointer"
             >
-              <span>Conheça Nossa História</span>
+              <span>Fale Conosco</span>
             </button>
           </div>
         </div>
