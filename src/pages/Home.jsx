@@ -333,7 +333,7 @@ export default function Home({ setActivePage, scrollToSection }) {
 
           {/* Avisos Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {avisos.map((aviso) => (
+            {(Array.isArray(avisos) ? avisos : (avisos.avisos || [])).map((aviso, idx) => (
               <div 
                 key={aviso.id || aviso.titulo}
                 className="bg-white/5 border border-white/10 hover:border-liturgical-gold/30 rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg"

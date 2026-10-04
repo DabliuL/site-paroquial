@@ -81,3 +81,43 @@ collections:
             name: "aviso_banner"
             widget: "text"
             hint: "Mensagem exibida no rodapé da seção de horários"
+
+  # ──────────────────────────────────────────────────────────
+  # 2. AVISOS PAROQUIAIS
+  # ──────────────────────────────────────────────────────────
+  - name: "avisos_paroquiais"
+    label: "📢 Avisos Paroquiais"
+    files:
+      - name: "avisos"
+        label: "Mural de Avisos"
+        file: "src/data/avisos.json"
+        format: json
+        fields:
+          - label: "📌 Lista de Avisos"
+            name: "avisos"
+            widget: "list"
+            label_singular: "Aviso"
+            summary: "{{fields.categoria}} — {{fields.titulo}}"
+            fields:
+              - label: "Título do Aviso"
+                name: "titulo"
+                widget: "string"
+                hint: "Título principal do aviso (ex: Inscrições da Catequese)"
+
+              - label: "Data / Período"
+                name: "data"
+                widget: "string"
+                hint: "Período ou data do aviso (ex: Inscrições Abertas, Próximo Domingo)"
+
+              - label: "Categoria"
+                name: "categoria"
+                widget: "select"
+                options: ["Secretaria", "Catequese", "Pastoral", "Festividade", "Aviso Geral", "Liturgia"]
+                default: "Aviso Geral"
+                hint: "Selecione a categoria do aviso"
+
+              - label: "Conteúdo / Descrição"
+                name: "conteudo"
+                widget: "text"
+                hint: "Descrição detalhada do aviso que será exibida para os fiéis no site"
+
