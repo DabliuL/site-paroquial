@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "titulo": "Atendimento da Secretaria Paroquial",
+    "data": "Aviso Geral",
+    "categoria": "Secretaria",
+    "conteudo": "O atendimento presencial da secretaria ocorre de terça a sexta das 08:00 às 12:00 e das 17:00 às 18:30, e aos sábados das 08:00 às 12:00. Dúvidas e agendamentos podem ser feitos também pelo WhatsApp."
+  },
+  {
+    "id": 2,
+    "titulo": "Inscrições para Catequese e Crisma",
+    "data": "Inscrições Abertas",
+    "categoria": "Catequese",
+    "conteudo": "Estão abertas as inscrições para a Catequese Infantil, Primeira Eucaristia e Crisma para jovens e adultos. Procure os catequistas ao final de cada missa ou passe na secretaria."
+  },
+  {
+    "id": 3,
+    "titulo": "Intenções de Missa e Pastoral do Dízimo",
+    "data": "Informativo",
+    "categoria": "Pastoral",
+    "conteudo": "As intenções para a Santa Missa devem ser entregues na secretaria até 30 minutos antes de cada celebração. Agradecemos a todos os dizimistas pelo sustento de nossa paróquia e capelas."
+  }
+]

@@ -3,6 +3,7 @@ import { Calendar, Clock, MapPin, ChevronRight, ArrowRight, BookOpen, Heart, Use
 import heroAltar from '../assets/hero_church_altar.png';
 import marianImg from '../assets/our_lady_guide.png';
 import horarios from '../data/horarios.json';
+import avisos from '../data/avisos.json';
 
 export default function Home({ setActivePage, scrollToSection }) {
 
@@ -310,141 +311,60 @@ export default function Home({ setActivePage, scrollToSection }) {
         </div>
       </section>
 
-      {/* 3. PARISH WHATSAPP ANNOUNCEMENTS GROUP SECTION */}
+      {/* 3. PARISH ANNOUNCEMENTS SECTION */}
       <section id="noticias" className="py-24 bg-mariana-navy relative overflow-hidden border-b border-white/5">
         {/* Soft decorative blur */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-mariana-blue-light/5 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Section Header */}
           <div className="text-center mb-16">
             <span className="text-xs font-bold uppercase tracking-widest text-liturgical-gold-light bg-liturgical-gold/10 px-4 py-1.5 rounded-full border border-liturgical-gold/20 inline-block mb-4">
-              Comunidade Conectada
+              Mural da Paróquia
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
-              Grupo de Avisos Paroquiais
+              Avisos Paroquiais
             </h2>
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              Fique por dentro de todas as celebrações, atualizações de horários, eventos e avisos importantes diretamente no seu celular.
+              Fique por dentro das últimas notícias, comunicados da secretaria e recados importantes da nossa comunidade.
             </p>
           </div>
 
-          {/* Unified Card */}
-          <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
-            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute -top-10 -left-10 w-48 h-48 bg-liturgical-gold/5 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              
-              {/* Left Column: Info & Details */}
-              <div className="lg:col-span-7 space-y-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
-                    <MessageCircle size={26} className="animate-pulse" />
+          {/* Avisos Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {avisos.map((aviso) => (
+              <div 
+                key={aviso.id || aviso.titulo}
+                className="bg-white/5 border border-white/10 hover:border-liturgical-gold/30 rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-liturgical-gold bg-liturgical-gold/10 px-3 py-1 rounded-full border border-liturgical-gold/20">
+                      {aviso.categoria}
+                    </span>
+                    <span className="text-xs text-gray-400 font-medium">
+                      {aviso.data}
+                    </span>
                   </div>
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
-                      Canal Oficial no WhatsApp
-                    </h3>
-                    <p className="text-xs text-emerald-400 font-medium">Grupo Silencioso e Informativo</p>
-                  </div>
+
+                  <h3 className="text-lg font-serif font-bold text-white mb-3 leading-snug">
+                    {aviso.titulo}
+                  </h3>
+
+                  <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-sans font-light">
+                    {aviso.conteudo}
+                  </p>
                 </div>
 
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-sans font-light">
-                  Para facilitar a comunicação com todos os paroquianos e moradores de Mauá (Magé), criamos um canal de avisos no WhatsApp. Ele funciona de forma silenciosa: apenas os coordenadores e a secretaria enviam mensagens importantes. Sem conversas paralelas ou spam.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-emerald-400 text-xs font-bold">✓</span>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold text-xs sm:text-sm">Avisos Rápidos</h4>
-                      <p className="text-gray-400 text-xs mt-0.5">Comunicados urgentes e notícias paroquiais.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-emerald-400 text-xs font-bold">✓</span>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold text-xs sm:text-sm">Liturgia Diária</h4>
-                      <p className="text-gray-400 text-xs mt-0.5">Leituras e meditações do dia para alimentar sua fé.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-emerald-400 text-xs font-bold">✓</span>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold text-xs sm:text-sm">Horários e Eventos</h4>
-                      <p className="text-gray-400 text-xs mt-0.5">Datas de retiros, festas das capelas e missas.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-emerald-400 text-xs font-bold">✓</span>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold text-xs sm:text-sm">100% Silencioso</h4>
-                      <p className="text-gray-400 text-xs mt-0.5">Sem notificações desnecessárias ou conversas paralelas.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-4">
-                  <a
-                    href="https://chat.whatsapp.com/mockGroupLink"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm px-8 py-4 rounded-2xl items-center justify-center space-x-3 shadow-lg shadow-emerald-500/15 hover:shadow-emerald-500/25 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer w-full sm:w-auto"
-                  >
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.602-1.005-5.05-2.839-6.89C16.656 2.134 14.22 1.127 11.99 1.127c-5.444 0-9.866 4.372-9.87 9.749-.001 1.764.476 3.486 1.382 5.01l-1.025 3.743 3.864-1.004c1.554.898 3.09 1.353 4.706 1.353zm11.233-7.513c-.301-.15-1.782-.872-2.056-.971-.274-.1-.475-.15-.675.15-.2.299-.775.971-.95 1.171-.175.2-.35.224-.651.075-1.162-.577-1.921-1.02-2.686-2.316-.2-.345-.2-.15.075-.425.275-.274.301-.349.45-.599.15-.25.075-.475-.038-.675-.112-.2-.675-1.623-.925-2.223-.244-.589-.494-.509-.675-.518-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8.375-.274.3-.15 1.172.925 2.196.2.274.3 1.162.775 1.871.4.6 1.05 1.163 1.775 1.5.725.337 1.45.225 1.95-.274.5-.499 1.701-1.696 1.751-2.122.05-.425-.075-.675-.225-.824z" />
-                    </svg>
-                    <span>Entrar no Grupo de Avisos</span>
-                  </a>
+                <div className="pt-6 border-t border-white/5 mt-6 flex items-center justify-between text-xs text-gray-400">
+                  <span className="flex items-center space-x-1.5 text-gray-400">
+                    <Megaphone size={14} className="text-liturgical-gold shrink-0" />
+                    <span>Paróquia N. S. da Guia</span>
+                  </span>
                 </div>
               </div>
-              
-              {/* Right Column: Interactive Chat Mockup */}
-              <div className="lg:col-span-5 bg-mariana-navy/60 border border-white/10 rounded-2xl p-5 shadow-2xl relative space-y-4 max-w-sm mx-auto w-full">
-                {/* Header bar of Chat */}
-                <div className="flex items-center space-x-3 pb-3 border-b border-white/5">
-                  <div className="w-10 h-10 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-serif font-bold shrink-0">
-                    †
-                  </div>
-                  <div className="font-sans">
-                    <h4 className="text-white font-semibold text-xs sm:text-sm">Avisos - N. S. da Guia</h4>
-                    <p className="text-[10px] text-emerald-400 font-medium">Canal Oficial Paroquial</p>
-                  </div>
-                </div>
-
-                {/* Message list */}
-                <div className="space-y-3 font-sans">
-                  {/* Msg 1 */}
-                  <div className="bg-emerald-950/40 border border-emerald-500/20 text-white rounded-2xl rounded-tl-none p-3.5 text-xs relative max-w-[90%]">
-                    <p className="font-semibold text-emerald-400 mb-1">Pascom - Liturgia</p>
-                    <p className="text-gray-300 leading-relaxed">Paz e Bem! A leitura bíblica de hoje nos convida à paciência e ao amor fraterno. Que Maria Santíssima guie seus passos neste dia. 📖🙏</p>
-                    <span className="absolute bottom-1 right-2 text-[8px] text-gray-500">07:15</span>
-                  </div>
-
-                  {/* Msg 2 */}
-                  <div className="bg-emerald-950/40 border border-emerald-500/20 text-white rounded-2xl rounded-tl-none p-3.5 text-xs relative max-w-[90%]">
-                    <p className="font-semibold text-emerald-400 mb-1">Secretaria Paroquial</p>
-                    <p className="text-gray-300 leading-relaxed">⚠️ Atenção: Excepcionalmente amanhã, o atendimento da secretaria será realizado apenas no horário da manhã (08:00 às 12:00) devido a reuniões pastorais diocesanas. Agradecemos a compreensão!</p>
-                    <span className="absolute bottom-1 right-2 text-[8px] text-gray-500">14:30</span>
-                  </div>
-                </div>
-
-                <div className="pt-2 flex items-center justify-center text-[10px] text-gray-500 font-sans">
-                  <span>Somente administradores podem enviar mensagens</span>
-                </div>
-              </div>
-
-            </div>
+            ))}
           </div>
 
         </div>
