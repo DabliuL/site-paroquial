@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, MapPin, ChevronRight, ArrowRight, BookOpen, Heart, Users, Compass, Megaphone, MessageCircle, Star, GraduationCap, Music, Droplets, Gift, CircleDot } from 'lucide-react';
+import { Calendar, Clock, MapPin, ChevronRight, ArrowRight, BookOpen, Heart, Users, Compass, Megaphone, MessageCircle, Star, GraduationCap, Music, Droplets, Gift, CircleDot, Copy, Check, QrCode, Building2 } from 'lucide-react';
 import heroAltar from '../assets/hero_church_altar.png';
 import marianImg from '../assets/our_lady_guide.png';
 import horarios from '../data/horarios.json';
 import avisos from '../data/avisos.json';
+import dizimoData from '../data/dizimo.json';
 
 export default function Home({ setActivePage, scrollToSection }) {
+  const [copiedPix, setCopiedPix] = useState(false);
 
-
-  const capelas = [
+  const handleCopyPix = () => {
+    if (dizimoData?.chave_pix) {
+      navigator.clipboard.writeText(dizimoData.chave_pix);
+      setCopiedPix(true);
+      setTimeout(() => setCopiedPix(false), 2500);
+    }
+  };
     {
       name: 'Igreja São Pedro',
       desc: 'Paróquia Nossa Senhora da Guia',
@@ -367,6 +374,123 @@ export default function Home({ setActivePage, scrollToSection }) {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* 3.5 DÍZIMO E PIX SECTION */}
+      <section id="dizimo" className="py-24 bg-gradient-to-b from-mariana-navy to-mariana-navy/95 border-b border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-radial-gradient from-liturgical-gold/5 via-transparent to-transparent pointer-events-none"></div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-liturgical-gold-light bg-liturgical-gold/10 px-4 py-1.5 rounded-full border border-liturgical-gold/20 inline-block mb-4">
+              Gratidão e Partilha
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
+              {dizimoData.titulo || 'Dízimo e Ofertas'}
+            </h2>
+            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+              {dizimoData.subtitulo}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* PIX Card */}
+            <div className="lg:col-span-7 bg-gradient-to-br from-white/5 to-white/[0.02] border border-liturgical-gold/30 rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-liturgical-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+              
+              <div>
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-liturgical-gold/15 border border-liturgical-gold/30 text-liturgical-gold flex items-center justify-center shrink-0">
+                    <QrCode size={26} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-serif font-bold text-white">Chave PIX Oficial</h3>
+                    <span className="text-xs text-liturgical-gold font-medium">Chave {dizimoData.tipo_chave}</span>
+                  </div>
+                </div>
+
+                <div className="bg-mariana-navy/80 border border-white/10 rounded-2xl p-4 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="text-center sm:text-left overflow-hidden w-full">
+                    <span className="text-[10px] uppercase tracking-wider text-gray-400 block font-semibold">Chave para Cópia:</span>
+                    <span className="text-sm sm:text-base font-mono font-bold text-white break-all">{dizimoData.chave_pix}</span>
+                  </div>
+                  <button
+                    onClick={handleCopyPix}
+                    className="w-full sm:w-auto bg-liturgical-gold hover:bg-liturgical-gold-dark text-mariana-navy font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-md flex items-center justify-center space-x-2 shrink-0 cursor-pointer active:scale-95"
+                  >
+                    {copiedPix ? (
+                      <>
+                        <Check size={16} />
+                        <span>Copiado!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy size={16} />
+                        <span>Copiar Chave</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                <div className="space-y-2 text-xs text-gray-300">
+                  <div className="flex justify-between border-b border-white/5 pb-2">
+                    <span className="text-gray-400">Favorecido:</span>
+                    <span className="font-semibold text-white">{dizimoData.titular}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-white/5 pb-2">
+                    <span className="text-gray-400">Banco:</span>
+                    <span className="text-gray-200">{dizimoData.banco}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-white/5 mt-6 text-xs text-center sm:text-left text-liturgical-gold-light italic">
+                "{dizimoData.mensagem}"
+              </div>
+            </div>
+
+            {/* Bank Details Card */}
+            <div className="lg:col-span-5 bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-xl">
+              <div>
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 text-white flex items-center justify-center shrink-0">
+                    <Building2 size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-serif font-bold text-white">Transferência Bancária</h3>
+                    <span className="text-xs text-gray-400">Depósito / TED / DOC</span>
+                  </div>
+                </div>
+
+                <div className="space-y-4 text-xs">
+                  <div className="bg-mariana-navy/50 p-3 rounded-xl border border-white/5">
+                    <span className="block text-gray-400 text-[10px] uppercase font-semibold">Banco</span>
+                    <span className="text-sm font-bold text-white">{dizimoData.banco}</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-mariana-navy/50 p-3 rounded-xl border border-white/5">
+                      <span className="block text-gray-400 text-[10px] uppercase font-semibold">Agência</span>
+                      <span className="text-sm font-bold text-white">{dizimoData.agencia}</span>
+                    </div>
+                    <div className="bg-mariana-navy/50 p-3 rounded-xl border border-white/5">
+                      <span className="block text-gray-400 text-[10px] uppercase font-semibold">Conta Corrente</span>
+                      <span className="text-sm font-bold text-white">{dizimoData.conta}</span>
+                    </div>
+                  </div>
+                  <div className="bg-mariana-navy/50 p-3 rounded-xl border border-white/5">
+                    <span className="block text-gray-400 text-[10px] uppercase font-semibold">Titular / Razão Social</span>
+                    <span className="text-xs font-semibold text-gray-200">{dizimoData.titular}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-white/5 mt-6 text-[11px] text-gray-400 flex items-center space-x-2">
+                <Gift size={16} className="text-liturgical-gold shrink-0" />
+                <span>Deus abençoe a sua fidelidade e generosidade!</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

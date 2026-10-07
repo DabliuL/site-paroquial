@@ -38,6 +38,7 @@ export default function Navbar({ activePage, setActivePage, scrollToSection }) {
     { label: 'Capelas', page: 'home', sectionId: 'capelas' },
     { label: 'Pastorais', page: 'home', sectionId: 'pastorais' },
     { label: 'Avisos', page: 'home', sectionId: 'noticias' },
+    { label: 'Dízimo', page: 'home', sectionId: 'dizimo' },
     { label: 'Contato', page: 'contact', sectionId: null },
   ];
 

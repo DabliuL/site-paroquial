@@ -121,3 +121,53 @@ collections:
                 widget: "text"
                 hint: "Descrição detalhada do aviso que será exibida para os fiéis no site"
 
+  # ──────────────────────────────────────────────────────────
+  # 3. DÍZIMO E OFERTAS (PIX)
+  # ──────────────────────────────────────────────────────────
+  - name: "dizimo_pix"
+    label: "💳 Dízimo & PIX"
+    files:
+      - name: "dizimo"
+        label: "Dados do PIX e Dízimo"
+        file: "src/data/dizimo.json"
+        format: json
+        fields:
+          - label: "Título da Seção"
+            name: "titulo"
+            widget: "string"
+
+          - label: "Subtítulo / Apresentação"
+            name: "subtitulo"
+            widget: "text"
+
+          - label: "Tipo de Chave PIX"
+            name: "tipo_chave"
+            widget: "string"
+            hint: "Ex: CNPJ, E-mail, Celular ou Chave Aleatória"
+
+          - label: "Chave PIX"
+            name: "chave_pix"
+            widget: "string"
+            hint: "Chave PIX completa para cópia dos fiéis (ex: 12.345.678/0001-90)"
+
+          - label: "Titular da Conta"
+            name: "titular"
+            widget: "string"
+
+          - label: "Nome do Banco"
+            name: "banco"
+            widget: "string"
+
+          - label: "Agência"
+            name: "agencia"
+            widget: "string"
+
+          - label: "Conta Corrente"
+            name: "conta"
+            widget: "string"
+
+          - label: "Mensagem Bíblica / Rodapé"
+            name: "mensagem"
+            widget: "string"
+
+
