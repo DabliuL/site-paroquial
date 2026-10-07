@@ -377,7 +377,8 @@ export default function Home({ setActivePage, scrollToSection }) {
         </div>
       </section>
 
-      {/* 3.5 DÍZIMO E PIX SECTION */}
+      {/* 3.5 DÍZIMO E PIX SECTION - oculto temporariamente */}
+      {false && (
       <section id="dizimo" className="py-24 bg-gradient-to-b from-mariana-navy to-mariana-navy/95 border-b border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-radial-gradient from-liturgical-gold/5 via-transparent to-transparent pointer-events-none"></div>
 
@@ -493,6 +494,7 @@ export default function Home({ setActivePage, scrollToSection }) {
           </div>
         </div>
       </section>
+      )}
 
       {/* 4. THE 9 CHAPELS GRID */}
       <section id="capelas" className="py-24 bg-mariana-navy">
