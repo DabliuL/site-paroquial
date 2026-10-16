@@ -96,11 +96,6 @@ export default function Home({ setActivePage, scrollToSection }) {
       desc: 'Movimentos de adolescentes e jovens unidos na fé: formação humana, retiros espirituais, dinâmicas e missão.',
     },
     {
-      title: 'Goretinhas',
-      icon: <Sparkles size={24} />,
-      desc: 'Inspiradas no testemunho de Santa Maria Goretti, grupo de meninas e jovens cultivando a oração, modéstia e virtudes cristãs.',
-    },
-    {
       title: 'Pastoral da Criança',
       icon: <Baby size={24} />,
       desc: 'Ações de desenvolvimento integral infantil, nutrição e apoio fraterno a gestantes e famílias da comunidade.',
@@ -146,7 +141,7 @@ export default function Home({ setActivePage, scrollToSection }) {
       desc: 'Acolhimento e cuidado com o rebanho do Senhor, amparando os irmãos nas suas necessidades espirituais e humanas.',
     },
     {
-      title: 'Pastoral Litúrgica e Hostiarias',
+      title: 'Pastoral Litúrgica e Hostiárias',
       icon: <BookOpen size={24} />,
       desc: 'Preparação criteriosa das celebrações litúrgicas, formação de leitores, acolhida e o santo zelo pelas hóstias e alfaias.',
     },

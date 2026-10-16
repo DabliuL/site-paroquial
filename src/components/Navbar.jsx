@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Cross } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import brazaoParoquia from '../assets/brazao_paroquia.png';
 
 export default function Navbar({ activePage, setActivePage, scrollToSection }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,8 +53,12 @@ export default function Navbar({ activePage, setActivePage, scrollToSection }) {
             onClick={() => handleNavClick('home')} 
             className="flex items-center space-x-3 cursor-pointer group"
           >
-            <div className="bg-liturgical-gold/20 p-2 rounded-full border border-liturgical-gold/40 group-hover:bg-liturgical-gold/30 transition-all">
-              <span className="text-liturgical-gold font-serif font-bold text-xl leading-none">†</span>
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <img 
+                src={brazaoParoquia} 
+                alt="Brasão Paróquia Nossa Senhora da Guia" 
+                className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
+              />
             </div>
             <div>
               <span className="block text-lg font-serif font-bold text-white tracking-wide leading-tight group-hover:text-liturgical-gold transition-colors">

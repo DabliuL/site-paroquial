@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import brazaoParoquia from '../assets/brazao_paroquia.png';
 
 export default function Footer({ setActivePage, scrollToSection }) {
   const currentYear = new Date().getFullYear();
@@ -21,9 +22,13 @@ export default function Footer({ setActivePage, scrollToSection }) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Column 1: Brand & About */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleNavClick('home')}>
-              <div className="bg-liturgical-gold/20 p-2 rounded-full border border-liturgical-gold/40">
-                <span className="text-liturgical-gold font-serif font-bold text-lg leading-none">†</span>
+            <div className="flex items-center space-x-3 cursor-pointer group" onClick={() => handleNavClick('home')}>
+              <div className="relative w-10 h-10 shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform">
+                <img 
+                  src={brazaoParoquia} 
+                  alt="Brasão Paróquia Nossa Senhora da Guia" 
+                  className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
+                />
               </div>
               <div>
                 <span className="block text-md font-serif font-bold text-white tracking-wide">
