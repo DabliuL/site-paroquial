@@ -682,6 +682,33 @@ export default function Home({ setActivePage, scrollToSection }) {
               );
             })}
           </div>
+
+          {/* Chamada para Doações via WhatsApp */}
+          <div className="mt-16 bg-gradient-to-r from-mariana-blue/60 via-mariana-blue-light/10 to-mariana-blue/60 border border-liturgical-gold/30 rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden shadow-lg backdrop-blur-sm">
+            <div className="max-w-3xl mx-auto flex flex-col items-center">
+              <div className="w-12 h-12 rounded-2xl bg-liturgical-gold/15 border border-liturgical-gold/30 flex items-center justify-center text-liturgical-gold mb-4">
+                <Heart size={24} />
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-3">
+                Deseja apoiar nossas obras e pastorais?
+              </h3>
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 max-w-xl">
+                Sua generosidade mantém nossas ações sociais, o cuidado com as capelas e a evangelização em nossa comunidade.
+              </p>
+              <p className="text-sm sm:text-base text-gray-200 font-medium">
+                Se você tem interesse em fazer doações,{' '}
+                <a
+                  href={`https://wa.me/5521985780538?text=${encodeURIComponent('Quero fazer uma doação')}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center space-x-1.5 text-liturgical-gold font-bold hover:text-liturgical-gold-light underline underline-offset-4 decoration-liturgical-gold/60 hover:decoration-liturgical-gold transition-colors duration-200"
+                >
+                  <span>clique aqui</span>
+                  <ArrowRight size={16} className="inline shrink-0" />
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
