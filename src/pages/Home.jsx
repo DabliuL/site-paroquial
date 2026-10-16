@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, MapPin, ChevronRight, ArrowRight, BookOpen, Heart, Users, Compass, Megaphone, MessageCircle, Star, GraduationCap, Music, Droplets, Gift, CircleDot, Copy, Check, QrCode, Building2 } from 'lucide-react';
+import { Calendar, Clock, MapPin, ChevronRight, ArrowRight, BookOpen, Heart, Users, Compass, Megaphone, MessageCircle, Star, GraduationCap, Music, Droplets, Gift, CircleDot, Copy, Check, QrCode, Building2, Sparkles, Flame, Shield, Radio, PartyPopper, HeartHandshake, Baby, Footprints, Church, Cross } from 'lucide-react';
 import heroAltar from '../assets/hero_church_altar.png';
 import marianImg from '../assets/our_lady_guide.png';
 import horarios from '../data/horarios.json';
@@ -16,6 +16,8 @@ export default function Home({ setActivePage, scrollToSection }) {
       setTimeout(() => setCopiedPix(false), 2500);
     }
   };
+
+  const capelas = [
     {
       name: 'Igreja São Pedro',
       desc: 'Paróquia Nossa Senhora da Guia',
@@ -76,52 +78,112 @@ export default function Home({ setActivePage, scrollToSection }) {
     {
       title: 'Pastoral Familiar',
       icon: <Users size={24} />,
-      desc: 'Evangelização e apoio ao matrimônio e à vida familiar. Encontros de noivos, casais e aconselhamento espiritual.',
+      desc: 'Evangelização, fortalecimento dos laços familiares e apoio espiritual ao matrimônio e aos lares cristãos.',
     },
     {
-      title: 'Setor Juventude',
-      icon: <Compass size={24} />,
-      desc: 'Espaço de partilha, música e aprofundamento na fé feito por jovens para jovens. Dinâmicas, retiros e oração.',
+      title: 'Pastoral dos Noivos e Namorados',
+      icon: <HeartHandshake size={24} />,
+      desc: 'Acompanhamento de jovens casais, namorados e preparação de noivos para o sacramento do Matrimônio com base cristã.',
     },
     {
-      title: 'Pastoral da Caridade',
+      title: 'Equipes de Nossa Senhora (ENS)',
       icon: <Heart size={24} />,
-      desc: 'Assistência material e espiritual direta a famílias em vulnerabilidade social em Magé. Cestas básicas, agasalhos e apoio solidário.',
+      desc: 'Movimento de espiritualidade conjugal que ajuda os casais cristãos a progredirem no amor a Deus e mútuo.',
     },
     {
-      title: 'Pastoral Litúrgica',
-      icon: <BookOpen size={24} />,
-      desc: 'Formação de leitores, acólitos e equipe de acolhida para enriquecer a celebração da Santa Missa.',
+      title: 'Setor Juventude (FAC, JOAM, Abandono e ACJ)',
+      icon: <Compass size={24} />,
+      desc: 'Movimentos de adolescentes e jovens unidos na fé: formação humana, retiros espirituais, dinâmicas e missão.',
     },
     {
-      title: 'Coroinhas',
-      icon: <Star size={24} />,
-      desc: 'Grupo de crianças e jovens que servem ao altar nas celebrações eucarísticas, desenvolvendo o amor à liturgia e à vida de fé.',
+      title: 'Goretinhas',
+      icon: <Sparkles size={24} />,
+      desc: 'Inspiradas no testemunho de Santa Maria Goretti, grupo de meninas e jovens cultivando a oração, modéstia e virtudes cristãs.',
     },
     {
-      title: 'Catequese',
-      icon: <GraduationCap size={24} />,
-      desc: 'Preparação de crianças, jovens e adultos para receber os sacramentos da iniciação cristã: Batismo, Eucaristia e Confirmação.',
-    },
-    {
-      title: 'Pastoral do Dízimo',
-      icon: <Gift size={24} />,
-      desc: 'Animação e formação da comunidade sobre a importância do dízimo como ato de gratidão, partilha e sustento da missão paroquial.',
-    },
-    {
-      title: 'Pastoral dos Músicos',
-      icon: <Music size={24} />,
-      desc: 'Grupo de cantores e instrumentistas que animam a oração e as celebrações litúrgicas com louvor, alegria e serviço à comunidade.',
-    },
-    {
-      title: 'Terço dos Homens',
-      icon: <CircleDot size={24} />,
-      desc: 'Movimento de evangelização masculina que reúne homens de todas as idades para rezar o Terço, partilhar a fé e crescer em santidade.',
+      title: 'Pastoral da Criança',
+      icon: <Baby size={24} />,
+      desc: 'Ações de desenvolvimento integral infantil, nutrição e apoio fraterno a gestantes e famílias da comunidade.',
     },
     {
       title: 'Pastoral do Batismo',
       icon: <Droplets size={24} />,
-      desc: 'Acompanhamento e preparação de pais e padrinhos para o sacramento do Batismo, primeiro passo na vida cristã e na comunidade eclesial.',
+      desc: 'Acolhimento e formação de pais e padrinhos para a recepção do primeiro sacramento e início da vida na graça de Deus.',
+    },
+    {
+      title: 'Catequese',
+      icon: <GraduationCap size={24} />,
+      desc: 'Iniciação à vida cristã de crianças, jovens e adultos: preparação para a Primeira Eucaristia e Crisma.',
+    },
+    {
+      title: 'EESA (Nova Evangelização)',
+      icon: <Flame size={24} />,
+      desc: 'Escola de Evangelização Santo André: formação de discípulos e apóstolos comprometidos com o anúncio vivo da Palavra.',
+    },
+    {
+      title: 'Cursilho de Cristandade',
+      icon: <Footprints size={24} />,
+      desc: 'Movimento que busca a vivência do fundamental cristão para fermentar os ambientes sociais com o Evangelho.',
+    },
+    {
+      title: 'PASCOM (Pastoral da Comunicação)',
+      icon: <Radio size={24} />,
+      desc: 'Divulgação dos sacramentos, celebrações, notícias e cobertura pastoral, conectando a Igreja e a comunidade pelas redes.',
+    },
+    {
+      title: 'Pastoral de Eventos',
+      icon: <PartyPopper size={24} />,
+      desc: 'Organização, acolhida e planejamento das festividades da padroeira, quermesses, almoços e encontros paroquiais.',
+    },
+    {
+      title: 'Pastoral da Caridade',
+      icon: <Heart size={24} />,
+      desc: 'Assistência direta, arrecadação e distribuição de alimentos, roupas e solidariedade às famílias em situação de vulnerabilidade.',
+    },
+    {
+      title: 'Apostolado Bom Pastor',
+      icon: <Shield size={24} />,
+      desc: 'Acolhimento e cuidado com o rebanho do Senhor, amparando os irmãos nas suas necessidades espirituais e humanas.',
+    },
+    {
+      title: 'Pastoral Litúrgica e Hostiarias',
+      icon: <BookOpen size={24} />,
+      desc: 'Preparação criteriosa das celebrações litúrgicas, formação de leitores, acolhida e o santo zelo pelas hóstias e alfaias.',
+    },
+    {
+      title: 'Cerimoniários e Coroinhas',
+      icon: <Star size={24} />,
+      desc: 'Serviço digno e piedoso ao altar nas celebrações eucarísticas, cultivando nas crianças e jovens o amor à Santa Missa.',
+    },
+    {
+      title: 'Pastoral dos Músicos',
+      icon: <Music size={24} />,
+      desc: 'Ministério de canto e instrumentos que eleva os corações a Deus nas celebrações litúrgicas e louvores comunitários.',
+    },
+    {
+      title: 'Terço dos Homens',
+      icon: <CircleDot size={24} />,
+      desc: 'Homens de fé reunidos semanalmente para a recitação do Santo Terço, oração pelas famílias e crescimento na fidelidade cristã.',
+    },
+    {
+      title: 'Legião de Maria',
+      icon: <Shield size={24} />,
+      desc: 'Associação de leigos sob a proteção de Maria Santíssima, dedicada à oração, visitas missionárias a enfermos e evangelização.',
+    },
+    {
+      title: 'Apostolado da Oração',
+      icon: <Heart size={24} />,
+      desc: 'Rede Mundial de Oração do Papa que vive a devoção profunda e a consagração diária ao Sagrado Coração de Jesus.',
+    },
+    {
+      title: 'Liga Católica',
+      icon: <Church size={24} />,
+      desc: 'Liga Católica de Jesus, Maria e José: oração diária, testemunho de fé e veneração constante à Sagrada Família.',
+    },
+    {
+      title: 'Pastoral do Dízimo',
+      icon: <Gift size={24} />,
+      desc: 'Conscientização sobre o dízimo bíblico como dever de gratidão, corresponsabilidade e partilha para a missão da Igreja.',
     },
   ];
 
