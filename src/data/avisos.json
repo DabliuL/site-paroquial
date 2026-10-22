@@ -2,24 +2,24 @@
   "avisos": [
     {
       "id": 1,
-      "titulo": "Atendimento da Secretaria Paroquial",
-      "data": "Aviso Geral",
-      "categoria": "Secretaria",
-      "conteudo": "O atendimento presencial da secretaria ocorre de terça a sexta das 08:00 às 12:00 e das 17:00 às 18:30, e aos sábados das 08:00 às 12:00. Dúvidas e agendamentos podem ser feitos também pelo WhatsApp."
+      "titulo": "Retorno da Adoração ao Santíssimo",
+      "data": "Toda Quinta-feira",
+      "categoria": "Adoração",
+      "conteudo": "A paróquia está retornando com a Adoração ao Santíssimo toda quinta-feira na Igreja de São Pedro! Exposição do Santíssimo das 08h00 às 18h20, Atendimento de Confissões às 18h00 e Santa Missa às 18h30 com o Padre Carlos Magno."
     },
     {
       "id": 2,
-      "titulo": "Inscrições para Catequese e Crisma",
-      "data": "Inscrições Abertas",
-      "categoria": "Catequese",
-      "conteudo": "Estão abertas as inscrições para a Catequese Infantil, Primeira Eucaristia e Crisma para jovens e adultos. Procure os catequistas ao final de cada missa ou passe na secretaria."
+      "titulo": "Iniciação à Vida Cristã: Batismo de Crianças",
+      "data": "Novembro",
+      "categoria": "Batismo",
+      "conteudo": "Batismo para crianças de 0 a 7 anos na Igreja de São Pedro. 1ª Reunião com pais e padrinhos em 27/10 e 2ª em 03/11 (Missa às 18h30, reunião às 19h). Batizados em 15/11 e 29/11 às 08h30. Informações: (21) 98578-0538."
     },
     {
       "id": 3,
-      "titulo": "Intenções de Missa e Pastoral do Dízimo",
-      "data": "Informativo",
-      "categoria": "Pastoral",
-      "conteudo": "As intenções para a Santa Missa devem ser entregues na secretaria até 30 minutos antes de cada celebração. Agradecemos a todos os dizimistas pelo sustento de nossa paróquia e capelas."
+      "titulo": "Novena e Oração pelo Brasil",
+      "data": "16 a 24 de Outubro",
+      "categoria": "Espiritualidade",
+      "conteudo": "Santo Terço todos os dias às 18h (hora da Ave-Maria) rezando a Oração da Novena pelo Brasil e intenções com atos concretos diários. Dias de jejum: sextas-feiras, 16 e 23 de outubro. Junte-se a nós em oração pela nossa pátria!"
     }
   ]
 }

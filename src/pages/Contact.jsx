@@ -118,8 +118,8 @@ export default function Contact() {
                 <div>
                   <h4 className="text-md font-serif font-bold text-white mb-2">Horário de Funcionamento</h4>
                   <p className="text-xs text-gray-300 leading-relaxed">
-                    <strong className="text-white font-semibold">Terça a Sexta-feira:</strong> 08h às 12h e 17h às 18h30<br />
-                    <strong className="text-white font-semibold">Sábados:</strong> 08h às 12h<br />
+                    <strong className="text-white font-semibold">Terça a Sexta-feira:</strong> 07h30 às 11h30 e 17h30 às 18h30<br />
+                    <strong className="text-white font-semibold">Sábados:</strong> 07h30 às 11h30<br />
                     <strong className="text-white font-semibold">Domingos e Segundas-feiras:</strong> Fechado
                   </p>
                 </div>
